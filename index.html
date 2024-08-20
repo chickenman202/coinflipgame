@@ -35,6 +35,18 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             width: 80%;
             max-width: 500px;
+            position: relative; /* Add this */
+        }
+        .bird {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            animation: fly 2s ease-in-out infinite;
+        }
+        @keyframes fly {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
         h1 {
             font-size: 2.5rem;
@@ -142,6 +154,7 @@
     </div>
 
     <div class="game-container">
+        <div class="bird">🐦</div>
         <h1>Heads or Tails</h1>
         <div id="coin">
             <div class="coin-face heads">👤</div>
